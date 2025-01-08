@@ -1,0 +1,63 @@
+---
+import {getCollection} from "astro:content";
+import FormattedDate from "./FormattedDate.astro";
+
+const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const today = new Date();
+---
+<!--FOOTER-->
+	<footer>
+		<div id="footer-top-wrap">
+			<section id="footer-top">
+				<article class="about-w">
+					<h5>About Animecon</h5>
+					<hr>
+					<p>Sekaicon 2025 is your chance to be among the very first to dive into a world of vibrant fandoms, incredible panels, and unforgettable experiences. Join us for a weekend filled with cosplay contests, live performances, gaming, tournaments, and much more. Don’t miss out on this historic debut—get your tickets now!</p>
+					<a href="#">Read More About Us...</a>
+				</article>
+				<article class="contact-w">
+					<h5>Get in Touch</h5>
+					<hr>
+					<ul class="contact-items">
+						<li>
+							<img src="/images/about-item01.png" alt="ctc-option">
+							<h6>Venue Address</h6>
+							<p>Cherry Valley Hotel</p>
+							<p>2299 Cherry Valley Rd SE, Newark, OH 43055</p>
+						</li>
+						<li>
+							<img src="/images/contact-item02.png" alt="ctc-option">
+							<h6>Venue Phone</h6>
+							<p>(740) 788-1200</p>
+						</li>
+					</ul>
+				</article>
+				<article class="posts-w">
+					<h5>Recent Posts</h5>
+					<hr>
+					{posts.slice(0,3).map((post, index) => (
+						<article>
+							<a href={`blog/${post.id}`}>{post.data.title}</a>
+						</article>
+					))}
+				</article>
+			</section>
+		</div>
+		<div id="footer-bottom-wrap">
+			<section id="footer-bottom">
+				<h6>
+					&copy; {today.getFullYear()} <span>Sekaicon</span>. All rights reserved.
+				</h6>
+				<ul class="social-links small">
+					<li class="fb"><a href="#"></a></li>
+					<li class="twt"><a href="#"></a></li>
+					<li class="gplus"><a href="#"></a></li>
+					<li class="flickr"><a href="#"></a></li>
+					<li class="rss"><a href="#"></a></li>
+					<li class="vimeo"><a href="#"></a></li>
+				</ul>
+			</section>
+		</div>
+	</footer>
+	<!--/FOOTER-->

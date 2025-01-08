@@ -1,0 +1,324 @@
+[
+	{
+		"date": {
+			"day": 17,
+			"month": 2,
+			"year": 2015
+		},
+		"events": [
+					{
+						"side": "left",
+						"bullet": "big",
+						"time": {
+							"hours": 9,
+							"minutes": 0,
+							"am": true,
+							"pm": false
+						},
+						"image": false,
+						"video": false,
+						"items": [
+									{
+										"title": "Opening Ceremony",
+										"subtitle": "Principal Hall",
+										"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quisrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+									}
+								]
+					},
+					{
+						"side": "left",
+						"bullet": "big",
+						"time": {
+							"hours": 9,
+							"minutes": 0,
+							"am": true,
+							"pm": false
+						},
+						"image": "images/gallery/gallery-img03.jpg",
+						"video": false,
+						"items": [
+									{
+										"title": "Best Cosplay Contest",
+										"subtitle": "\"Spike Spiegel\" Auditorium",
+										"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quisrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+									}
+								]
+					},
+					{
+						"side": "right",
+						"bullet": "small",
+						"time": {
+							"hours": 12,
+							"minutes": 30,
+							"am": true,
+							"pm": false
+						},
+						"image": false,
+						"video": false,
+						"items": [
+									{
+										"title": "The New Bebop Screening",
+										"subtitle": "\"New Tokyo\" Auditorium",
+										"description": false
+									}
+								]
+					},
+					{
+						"side": "right",
+						"bullet": "small",
+						"time": {
+							"hours": 2,
+							"minutes": 0,
+							"am": false,
+							"pm": true
+						},
+						"image": false,
+						"video": false,
+						"items": [
+									{
+										"title": "Faye Valentine Autograph Signing",
+										"subtitle": "Third Floor - Hall \"Swordfish II\"",
+										"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quisrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+									}
+								]
+					},
+					{
+						"side": "right",
+						"bullet": "small",
+						"time": {
+							"hours": 6,
+							"minutes": 0,
+							"am": false,
+							"pm": true
+						},
+						"image": false,
+						"video": false,
+						"items": [
+									{
+										"title": "Full Metal Scientist",
+										"subtitle": "Conference Room A",
+										"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quisrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+									},
+									{
+										"title": "Battle of the Goddess Screening",
+										"subtitle": "\"KaiohKai\" Auditorium",
+										"description": false
+									}
+								]
+					}
+				]
+	},
+	{
+		"date": {
+			"day": 18,
+			"month": 2,
+			"year": 2015
+		},
+		"events": [
+					{
+						"side": "right",
+						"bullet": "small",
+						"time": {
+							"hours": 10,
+							"minutes": 0,
+							"am": true,
+							"pm": false
+						},
+						"image": false,
+						"video": false,
+						"items": [
+									{
+										"title": "Cowboy Champloo Game Test",
+										"subtitle": "Second Floor - Hall A",
+										"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quisrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+									}
+								]
+					},
+					{
+						"side": "left",
+						"bullet": "small",
+						"time": {
+							"hours": 12,
+							"minutes": 0,
+							"am": false,
+							"pm": true
+						},
+						"image": false,
+						"video": false,
+						"items": [
+									{
+										"title": "Fullmetal Scientist Q&A",
+										"subtitle": "Conference Room A",
+										"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quisrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+									},
+									{
+										"title": "Battle of the Goddess Screening",
+										"subtitle": "\"KaiohKai\" Auditorium",
+										"description": false
+									},
+									{
+										"title": "Attack on Jupiter Panel",
+										"subtitle": "Conference Room C",
+										"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quisrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+									}
+								]
+					},
+					{
+						"side": "left",
+						"bullet": "small",
+						"time": {
+							"hours": 6,
+							"minutes": 0,
+							"am": false,
+							"pm": true
+						},
+						"image": false,
+						"video": false,
+						"items": [
+									{
+										"title": "Shinigami Squad Panel",
+										"subtitle": "Third Floor - Hall C",
+										"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quisrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+									}
+								]
+					},
+					{
+						"side": "right",
+						"bullet": "big",
+						"time": {
+							"hours": 4,
+							"minutes": 0,
+							"am": false,
+							"pm": true
+						},
+						"image": false,
+						"video": "<iframe src=\"http://player.vimeo.com/video/109558222\"></iframe>",
+						"items": [
+									{
+										"title": "Sakura Himura’s \"Three\" Movie",
+										"subtitle": "\"Tank!\" Auditorium",
+										"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quisrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+									}
+								]
+					}
+				]
+	},
+	{
+		"date": {
+			"day": 19,
+			"month": 2,
+			"year": 2015
+		},
+		"events": [
+					{
+						"side": "right",
+						"bullet": "small",
+						"time": {
+							"hours": 11,
+							"minutes": 30,
+							"am": true,
+							"pm": false
+						},
+						"image": false,
+						"video": false,
+						"items": [
+									{
+										"title": "Video Show",
+										"subtitle": "Third Floor - Hall C",
+										"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quisrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+									}
+								]
+					},
+					{
+						"side": "left",
+						"bullet": "big",
+						"time": {
+							"hours": 12,
+							"minutes": 50,
+							"am": false,
+							"pm": true
+						},
+						"image": false,
+						"video": false,
+						"items": [
+									{
+										"title": "Coffe Break",
+										"subtitle": "Second Floor - Hall B",
+										"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quisrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+									}
+								]
+					}
+				]
+	},
+	{
+		"date": {
+			"day": 20,
+			"month": 2,
+			"year": 2015
+		},
+		"events": [
+					{
+						"side": "left",
+						"bullet": "small",
+						"time": {
+							"hours": 9,
+							"minutes": 0,
+							"am": true,
+							"pm": false
+						},
+						"image": false,
+						"video": false,
+						"items": [
+									{
+										"title": "Opening Ceremony",
+										"subtitle": "Principal Hall",
+										"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quisrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+									}
+								]
+					},
+					{
+						"side": "left",
+						"bullet": "small",
+						"time": {
+							"hours": 10,
+							"minutes": 30,
+							"am": true,
+							"pm": false
+						},
+						"image": false,
+						"video": false,
+						"items": [
+									{
+										"title": "Gaming Contest",
+										"subtitle": "Conference Room B",
+										"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quisrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+									},
+									{
+										"title": "Knowledge Contest",
+										"subtitle": "Conference Room A",
+										"description": false
+									}
+								]
+					},
+					{
+						"side": "right",
+						"bullet": "big",
+						"time": {
+							"hours": 12,
+							"minutes": 50,
+							"am": false,
+							"pm": true
+						},
+						"image": "images/gallery/gallery-img06.jpg",
+						"video": false,
+						"items": [
+									{
+										"title": "Cosplay Contest",
+										"subtitle": "Principal Hall",
+										"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quisrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+									}
+								]
+					}
+				]
+	}
+]
