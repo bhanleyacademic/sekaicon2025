@@ -1,3 +1,36 @@
 ---
-$END$
+import {getCollection} from "astro:content";
+import FormattedDate from "./FormattedDate.astro";
+
+const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---
+<!--BLOG NEWS-->
+	<div id="blog-news-wrap">
+		<section id="blog-news">
+			<p class="pre-title">Take a Look</p>
+			<h2>Blog <span>and</span> <span>News</span></h2>
+			<hr>
+			<!--POSTS-->
+			<ul class="posts small">
+                {posts.slice(0,3).map((post, index) => (
+                    <li>
+                        <figure class="imgLiquidFill">
+                            <div>
+                                <h3>{post.data.pubDate.getDate()}</h3>
+                                <h3>{post.data.pubDate.toLocaleString("en-US", {month: "long"})}<br>{post.data.pubDate.getFullYear()}</h3>
+                            </div>
+                            <img src={post.data.heroImage} alt="post-img">
+                        </figure>
+                        <article>
+                            <h5>{post.data.title}</h5>
+                            <p>{post.data.description}</p>
+                            <a href={`blog/${post.id}`} class="button ruby">Read More</a>
+                        </article>
+                    </li>
+                ))}
+			</ul>
+			<!--/POSTS-->
+			<div class="cleaner"></div>
+		</section>
+	</div>
+	<!--/BLOG NEWS-->

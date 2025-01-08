@@ -1,3 +1,43 @@
 ---
-$END$
+const aboutItem = [
+    {
+        img: '/images/about-item01.png',
+        title: 'Special Guests',
+        description: 'Meet special guests in the anime, gaming and convention industry. Grab a photo or autograph or attend programming!'
+    },
+    {
+        img: '/images/about-item02.png',
+        title: 'Vendors & Artists',
+        description: 'Grab merch from your favorite anime or some beautiful artwork from one of our many vendors and artists.'
+    },
+    {
+        img: '/images/about-item03.png',
+        title: 'Programming',
+        description: 'Experience panels from community members and guests, catch an exciting live event, or participate in cosplay—casually or in our cosplay contest!'
+    },
+    {
+        img: '/images/about-item04.png',
+        title: 'Gaming',
+        description: 'Play the way you want! Enjoy free-to-play  Tabletop, PC, Console and Arcade games in dedicated spaces. Feeling confident? Take part in a tournament to test your mettle against other convention attendees!'
+    },
+]
 ---
+<!--ABOUT US-->
+	<div id="about-wrap">
+		<section id="about">
+			<p class="pre-title">About Us</p>
+			<h2>Sekai<span>Con</span> <span>2025</span></h2>
+			<hr>
+			<ul class="about-items">
+                {aboutItem.map((item) => (
+                    <li>
+                        <img src={item.img} alt="about-img">
+                        <h5>{item.title}</h5>
+                        <p>{item.description}</p>
+                    </li>
+                ))}
+			</ul>
+			<div class="cleaner"></div>
+		</section>
+	</div>
+	<!--/ABOUT US-->

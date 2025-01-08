@@ -1,3 +1,38 @@
 ---
-$END$
+
+import BaseLayout from "../layouts/BaseLayout.astro";
+const guest=[{
+    name:'Anne Yatco',
+    description:'Anne Yatco is a Filipino American voice actor (and former forensic scientist). She is most well-known as the English voice of Raiden Shogun in Genshin Impact, Nobara Kugisaki in Jujutsu Kaisen, and Sabine in Miraculous Ladybug. Anime credits include Pompo the Cinephile, Vampire in the Garden, The Prince of Tennis, Platinum End, Blue Period, Sakugan, To Your Eternity, Beastars, Violet Evergarden: the Movie, The Hidden Dungeon Only I Can Enter, Godzilla Singular Point, Devilman Crybaby, and I’ve Been Killing Slimes for 300 Years. Video game credits include Fire Emblem Heroes, Ghostwire: Tokyo, Shadowverse, Smite, Paladins, Naraka Bladepoint, Epic Seven, Onmyoji Arena, Guardian Tales, Wasteland 3, and Final Fantasy 7 Remake. Anne is also a Twitch Partner, and regularly streams Genshin Impact and other games.',
+    img:'/images/Anne-Yatco-headshot-e1732256280506.jpg',
+    link:'https://www.imdb.com/name/nm3304361/',
+    gallery:[]
+},{
+    name:'Oriana Perón',
+    description:'Oriana Peron is a dynamic drag performer from Bloomington, IN, who turned her love for cosplay into a captivating stage career. Since 2006, Oriana has combined her passion for anime, video games, and musical artistry into one-of-a-kind drag acts that have dazzled audiences across the country. Known for her quirky and fun performances, she’s been featured in Crunchyroll, Anime News Network, and Watermark magazine. With a mission to create safe, engaging spaces and expand her anime-inspired drag shows internationally, Oriana continues to push the boundaries of performance art while spotlighting other talented nerdy performers.',
+    img:'/images/Screenshot-2024-10-04-at-12.46.17 AM-e1728049541117.png',
+    link:'https://www.orianaperon.com/',
+    gallery:[]
+}]
 ---
+<BaseLayout title="Guests">
+    <div class="guest">
+    {guest.map((guest) => (
+            <div class="guest-container">
+            <div class="guest-info">
+                <h2>{guest.name}</h2>
+                <p>{guest.description}</p>
+                <a href={guest.link} class="button ruby">Learn More</a>
+            </div>
+            <div class="guest-images">
+                <img src={guest.img} alt={guest.name} />
+                <div class="gallery">
+                    {guest.gallery.map((gallery) => (
+                        <img src={gallery.img} alt={gallery.alt} width="100px" />
+                    ))}
+                </div>
+            </div>
+        </div>
+    ))}
+    </div>
+</BaseLayout>

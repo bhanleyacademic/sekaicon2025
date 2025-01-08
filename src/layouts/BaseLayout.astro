@@ -1,3 +1,84 @@
 ---
-$END$
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import FrontBlog from "../components/FrontBlog.astro";
+import BaseHead from "../components/BaseHead.astro";
+import FrontAboutUs from "../components/FrontAboutUs.astro";
+import FrontGuests from "../components/FrontGuests.astro";
+import Navigation from "../components/Navigation.astro";
+import FrontContact from "../components/FrontContact.astro";
+import FrontNews from "../components/FrontNews.astro";
+import FrontTickets from "../components/FrontTickets.astro";
+import FrontPromo from "../components/FrontPromo.astro";
+
+import { SITE_DESCRIPTION } from '../consts';
+const {title} = Astro.props;
 ---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<BaseHead title={title} description={SITE_DESCRIPTION} />
+</head>
+<body>
+	<Navigation />
+    <!--BLOG-->
+	<div id="blog-wrap">
+		<section id="blog">
+			<section id="posts">
+				<!--POSTS-->
+				<ul class="posts medium open">
+					<!--POST-->
+					<li>
+						<article>
+                            <h5>{title}</h5>
+							<slot />
+                                                    </article>
+					</li>
+					<!--/POST-->
+				</ul>
+				<!--/POSTS-->
+				<div class="cleaner"></div>
+			</section>
+			<aside id="posts-w">
+
+			</aside>
+			<div class="cleaner"></div>
+		</section>
+	</div>
+	<!--/BLOG-->
+	<Footer />
+
+<!--jQuery-->
+	<script src="/js/brands.min.js" is:inline></script>
+<script src="/js/jquery-1.11.1.min.js" is:inline></script>
+<!--bxSlider-->
+<script src="/js/jquery.bxslider.min.js" is:inline></script>
+<!--XMCountdown-->
+<script src="/js/jquery.xmcountdown.min.js" is:inline></script>
+<!--Tweet-->
+<script src="/js/twitter/jquery.tweet.min.js" is:inline></script>
+<!--XMAccordion-->
+<script src="/js/jquery.xmaccordion.min.js" is:inline></script>
+<!--XMTab-->
+<script src="/js/jquery.xmtab.min.js" is:inline></script>
+<!--imgLiquid-->
+<script src="/js/imgLiquid-min.js" is:inline></script>
+<!--Menu-->
+<script src="/js/menu.js" is:inline></script>
+<!--Main-->
+<script src="/js/main.js" is:inline></script>
+<!-- Contact -->
+<script src="/js/contact.js" is:inline></script>
+<!--Google Maps API-->
+<script is:inline>
+  (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
+    key: "AIzaSyB3GIoND2cdrPCbBFFPqQT2wkQ3vJr6KRU",
+    v: "weekly",
+    // Use the 'v' parameter to indicate the version to use (weekly, beta, alpha, etc.).
+    // Add other bootstrap parameters as needed, using camel case.
+  });
+</script>
+	<!--Google Maps Config-->
+<script src="/js/gmaps.js" is:inline></script>
+</body>
+</html>

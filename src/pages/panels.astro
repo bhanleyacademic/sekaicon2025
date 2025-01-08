@@ -1,3 +1,111 @@
 ---
-$END$
+import BaseLayout from "../layouts/BaseLayout.astro";
+const panelists = [{
+    images:[
+        {img: '/images/sensei-eri-round-1024x1024.jpg',
+        alt: 'Eri Sensei'},
+        {img: '/images/download-5-225x225.jpeg',
+        alt: 'Eri Sensei'},],
+    name: 'Eri Sensei',
+    title: 'Sakura Juku Japanese Language School',
+    panelistDescription: 'Eri sensei grew up in Japan and moved to the US to study linguistics at the university and has been living here since then. Eri sensei loves to travel to different parts of the world whenever she gets a chance, learns about the different cultures, and tries out local food. ',
+    panels: [
+        {
+            title: 'How Culture Influences Japanese Language presented by Eri-sensei',
+            description: 'Intro-level panel on the proper uses and reasons behind things like the wide variety of honorifics and personal pronouns and examples of their correct use in anime and manga and the sometimes outdated or exaggerated uses of them as well.',
+        },
+        {
+            title: 'Japanese Language Meetup with Eri-sensei',
+            description: 'Attendees can meet and get some practice using their Japanese while Eri-sensei provides and opportunity to speak with a native speaker, get feedback on pronunciation and grammar, and ask questions',
+        },
+    ],
+    panelistSocials: [
+        {
+            icon: 'fab fa-facebook-f',
+            link: 'https://www.facebook.com/sakura19.nihongo',
+        },
+        {
+            icon: 'fab fa-instagram',
+            link: 'https://www.instagram.com/sakura19.nihongo/',
+        },
+        {
+            icon: 'fa-solid fa-globe',
+            link: 'https://www.sakurajuku-nihongo.com/',
+        },
+    ],},
+    {
+        images:[
+            {img: '/images/download-6-225x225.jpeg',
+            alt: 'Fantoche'},],
+    name: 'Fantoche',
+    title: 'Midwest-Based Vocal & Dance Cover Crew',
+    panelistDescription: '',
+    panels: [
+        {
+            title: 'K-Pop & J-Pop Dance Competition presented by Fantoche',
+            description: 'Single/Duet & Group category dance competition. This is a main event.',
+        },
+        {
+            title: 'Random Play Dance presented by Fantoche',
+            description: 'K-pop and j-pop favorites, including attendee requests, in a 2 hour RPD event.',
+        },
+        {
+            title: 'K-Pop Khaos presented by Fantoche',
+            description: 'Jeopardy-style panel where teams compete in multiple categories of k-pop music, artist, and industry trivia.',
+        },
+        {
+            title: 'K-Pop Workshop presented by Fantoche',
+            description: 'Come learn some new choreo or polish the details on a favorite to prepare for the RPD!',
+        },
+    ],
+    panelistSocials: [
+        {
+            icon: 'fab fa-instagram',
+            link: 'https://www.instagram.com/fantoche_covercrew/',
+        },
+        {
+            icon: 'fab fa-youtube',
+            link: 'https://www.youtube.com/@Fantochecovercrew',
+        },
+    ],
+}]
 ---
+<BaseLayout title="Panels">
+    <p>Thank you for your interest in panels at Sekaicon! Our panels schedule for Sekaicon 2025 is not available quite yet. Please keep an eye on our website and social media, or join our email list to be updated when our schedule becomes available. Thanks!</p>
+
+    <p>Interested in being a panelist at Sekaicon 2025? Fill out our interest form <a href="https://docs.google.com/forms/d/e/1FAIpQLSc8Vuku6uQEdV7YFquLnLLTJNFUVMf-Lo07x7bPq_mAc6SxDw/viewform">HERE</a> to be notified via email when panelist applications open!</p>
+    <h4>Featured Panelists</h4>
+    {panelists.map((panelist) => (
+        <div class="panelist">
+            <div class="left-panelist">
+                <div class="panelist-image">
+                    {panelist.images.map((image) => (
+                            <img src={image.img} alt={image.alt}/>
+                    ))}
+                </div>
+                <ul class="socials" style="min-height: 20px">
+                    {panelist.panelistSocials.map((social) => (
+                            <li><a href={social.link}><i class={social.icon}></i></a></li>
+                    ))}
+                </ul>
+            </div>
+            <div class="right-panelist">
+            <article>
+                <h5>{panelist.name}</h5>
+                <h6>{panelist.title}</h6>
+                <p>{panelist.panelistDescription}</p>
+            </article>
+            <div class="panelist-panels">
+                <h6>Featured Panels</h6>
+                    {panelist.panels.map((panel) => (
+                        <div class="panel">
+                            <h6>{panel.title}</h6>
+                            <p>{panel.description}</p>
+                        </div>
+                    ))}
+
+            </div>
+            </div>
+        </div>
+    ))}
+</BaseLayout>

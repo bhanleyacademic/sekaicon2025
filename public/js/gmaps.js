@@ -1,44 +1,27 @@
-function initialize() {
-  	var mapCanvas = document.getElementById('map');
+// Initialize and add the map
+let map;
 
-    var mapOptions = {
-      center: new google.maps.LatLng(40.755595, -73.987628),
-      disableDefaultUI: true,
-      scrollwheel: false,
-      zoom: 16,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-    }
-    //Create map
-    var map = new google.maps.Map(mapCanvas, mapOptions);
+async function initMap() {
+  // The location of Cherry Valley
+  const position = { lat: 40.052338243197234, lng:  -82.47682574232762 };
+  // Request needed libraries.
+  //@ts-ignore
+  const { Map } = await google.maps.importLibrary("maps");
+  const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
 
-    //Create marker
-    var marker = new google.maps.Marker({
-      position: new google.maps.LatLng(40.755585, -73.987628),
-      map: map,
-      title: 'the Bebop',
-      icon: 'images/map-marker.png'
- 	});
+  // The map, centered at Cherry Valley
+  map = new Map(document.getElementById("map"), {
+    zoom: 10,
+    center: position,
+    mapId: "SEKAICON",
+  });
 
-    //Map marker info
-    var contentString = '<div id="map-info">'+
-      '<h5>the Bebop</h5>'+
-      '<p style="text-align:left; margin:0;"><strong>the Bebop</strong>, is the <strong>best anime convention</strong> in the city.<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit maiores, incidunt quidem natus. Ut dolorum deleniti reiciendis tenetur illum, beatae cum, harum laborum, nisi omnis nulla laboriosam, ipsam nemo consectetur..</p>'+
-      '</div>';
+  // The marker, positioned at Cherry Valley
+  const marker = new AdvancedMarkerElement({
+    map: map,
+    position: position,
+    title: "Sekaicon",
+  });
+}
 
-    //Add info to marker 
-	var infowindow = new google.maps.InfoWindow({
-	  content: contentString
-	});
-
-	google.maps.event.addListener(marker, 'click', function() {
-		infowindow.open(map,marker);
-	});
-
-    //Keep map centered
-    google.maps.event.addDomListener(window, 'resize', function() {
-    	var center = map.getCenter();
-    	google.maps.event.trigger(map, "resize");
-    	map.setCenter(center); 
-	});
-  }
-  google.maps.event.addDomListener(window, 'load', initialize);
+initMap();

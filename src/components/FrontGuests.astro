@@ -1,3 +1,47 @@
 ---
-$END$
+const guestItem = [{
+    name: 'Anne Yatco',
+    role: 'Voice Actor',
+    img: '/images/Anne-Yatco-headshot-e1732256280506.jpg',
+    social: {
+        fb: '#',
+        twt: '#',
+        flickr: '#'
+    }
+    }, {
+    name: 'Oriana Perón',
+    role: 'Cosplayer',
+    img: '/images/Screenshot-2024-10-04-at-12.46.17 AM-e1728049541117.png',
+    social: {
+        fb: '#',
+        twt: '#',
+        flickr: '#'
+    }
+    },
+]
 ---
+<!--GUESTS-->
+	<div id="guests-wrap">
+		<section id="guests">
+			<p class="pre-title">Check Out Our</p>
+			<h2>Special <span>Guest</span> <span>Stars</span></h2>
+			<hr>
+			<ul class="guests-items">
+                {guestItem.map((item) => (
+                    <li>
+                        <div class="circle">
+                            <figure class="imgLiquidFill">
+                                <img src={item.img} alt="guest-item">
+                            </figure>
+                            <div class="fill"></div>
+                        </div>
+                        <h5>{item.name}</h5>
+                        <h6>{item.role}</h6>
+                        <a href="#" class="button ruby">Read More</a>
+                    </li>
+                ))}
+			</ul>
+			<div class="cleaner"></div>
+		</section>
+	</div>
+	<!--/GUESTS-->

@@ -1,3 +1,56 @@
 ---
-$END$
+const accordionItem = [{
+        title: 'Where will Sekaicon happen?',
+        content: '<p>Sekaicon will take place at Cherry Valley Hotel & Ohio Event Center in Newark, OH.</p>'
+    },
+    {
+        title: 'When will you announce Sekaicon\'s theme?',
+        content: '<p>For the first year of Sekaicon we have decided as an organization to make the theme…Sekaicon! Year one will be all about introducing Sekaicon to the world! Moving forward, themes will be decided and released prior to pre-registration opening.</p>'
+    },
+    {
+        title: 'Why is Sekaicon admission called a "Membership"?',
+        content: '<p>When you attend Sekaicon, you’re actually purchasing a single-year membership in Sekai Guild! This concept of purchasing a membership rather than an admission is not a new one, and has been particularly prevalent amongst fan-run anime conventions. Don\'t worry—typical Sekai Guild members have no year-round responsibilities, so sit back and enjoy the programming!</p>'
+    },
+    {
+        title: 'What is your refund policy?',
+        content: '<h4>General Refunds:</h4>' +
+			'<p>All badge sales are final. Refunds will not be issued for any reason, including but not limited to illness, schedule conflicts, or other personal reasons. Badges may be transferred to another person up to 30 days before the event. Transfer requests must be submitted in writing to registration@sekaicon.org with the original purchaser’s confirmation number and the new attendee’s information. In the event that Sekaicon is canceled by the organizers, full refunds will be issued to all registered attendees.</p>' +
+			'<h4>COVID-19 Related Refunds:</h4>' +
+			'<p>Attendees who test positive for COVID-19 within 14 days of the event may request a refund by providing proof of a positive test result. Refund requests must be submitted before the event start date to registration@sekaicon.org. In the event of a government-mandated shutdown or restrictions that lead to the cancellation of the event, full refunds will be provided to all registered attendees.</p>'
+    },
+    {
+        title: 'Is Sekaicon being run by another non-profit/convention?',
+        content: '<p>Sekai Guild is unaffiliated with any other organizations, non-profit or otherwise. Sekaicon is a brand-new convention! We have no ties to other groups or events, past or present.</p>'
+    }
+];
 ---
+<!--PROMO-->
+	<div id="promo-wrap">
+		<section id="promo">
+			<img src="images/anime-05.png" width="50%" alt="promo-img">
+			<article>
+				<h4><span></span> FAQ</h4>
+				<hr>
+				<!--ACCORDION-->
+				<ul id="accordion">
+                    {accordionItem.map((item) => (
+                        <li>
+                            <a href="#">{item.title}
+                            <svg class="plus">
+                                <rect class="vertical" x="4" width="3" height="11"/>
+                                <rect y="4" width="11" height="3"/>
+                            </svg>
+                            </a>
+                            <ul class="sub-items">
+                                <li>
+                                    <div set:html={item.content}></div>
+                                </li>
+                            </ul>
+                        </li>
+                    ))}
+				</ul>
+				<!--/ACCORDION-->
+			</article>
+		</section>
+	</div>
+	<!--/PROMO-->

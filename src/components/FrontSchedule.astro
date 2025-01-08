@@ -1,3 +1,146 @@
 ---
-$END$
+const day1event = [{
+    time: '9:00 am',
+    event: [{
+        title: 'Opening Ceremony',
+        location: 'Principal Hall',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quisrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+    }]},
+    {time: '12:30 am',
+    event: [{
+        title: 'Cowboy Champloo Panel',
+        location: 'Conference Room A',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quisrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+    },{
+        title: 'The New Bebop Screening',
+        location: '"New Tokyo" Auditorium'
+    },{
+        title: 'Breach Dubbing Team',
+        location: 'Conference Room B',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quisrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+    }]},
+];
+
+const day2event = [{
+    time: '9:00 am',
+    event: [{
+        title: 'Opening Ceremony',
+        location: 'Principal Hall',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quisrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+    }]},
+    {time: '12:30 am',
+    event: [{
+        title: 'Cowboy Champloo Panel',
+        location: 'Conference Room A',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quisrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+    },{
+        title: 'The New Bebop Screening',
+        location: '"New Tokyo" Auditorium'
+    },{
+        title: 'Breach Dubbing Team',
+        location: 'Conference Room B',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quisrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+    }]},
+];
+
+const day3event = [{
+    time: '9:00 am',
+    event: [{
+        title: 'Opening Ceremony',
+        location: 'Principal Hall',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quisrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+    }]},
+    {time: '12:30 am',
+    event: [{
+        title: 'Cowboy Champloo Panel',
+        location: 'Conference Room A',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quisrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+    },{
+        title: 'The New Bebop Screening',
+        location: '"New Tokyo" Auditorium'
+    },{
+        title: 'Breach Dubbing Team',
+        location: 'Conference Room B',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quisrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+    }]},
+];
 ---
+<!--SCHEDULE-->
+	<div id="schedule-wrap">
+		<section id="schedule">
+			<p class="pre-title">Check out the</p>
+			<h2>Sekaicon <span>Events</span> <span>Schedule</span></h2>
+			<hr>
+			<!--TAB-->
+			<ul id="tab">
+				<!--TAB OPTION-->
+				<li>
+					<a href="">Friday, April 11th<span></span></a>
+					<!--TAB CONTENT-->
+					<article class="item">
+                        {day1event.map((item) => (
+                            <article>
+                                <h6 class="timestamp">{item.time}</h6>
+                                {item.event.map((event) => (
+                                    <article class="event">
+                                        <h5>{event.title}</h5>
+                                        <h6>{event.location}</h6>
+                                        <p>{event.description}</p>
+                                    </article>
+                                ))}
+                            </article>
+                        ))}
+					</article>
+					<!--/TAB CONTENT-->
+				</li>
+				<!--/TAB OPTION-->
+
+				<!--TAB OPTION-->
+				<li>
+					<a href="javascript:">Saturday, April 12th<span></span></a>
+					<!--TAB CONTENT-->
+					<article class="item">
+                        {day2event.map((item) => (
+                            <article>
+                                <h6 class="timestamp">{item.time}</h6>
+                                {item.event.map((event) => (
+                                    <article class="event">
+                                        <h5>{event.title}</h5>
+                                        <h6>{event.location}</h6>
+                                        <p>{event.description}</p>
+                                    </article>
+                                ))}
+                            </article>
+                        ))}
+					</article>
+					<!--/TAB CONTENT-->
+				</li>
+				<!--/TAB OPTION-->
+
+				<!--TAB OPTION-->
+				<li>
+					<a href="">Sunday, April 13th<span></span></a>
+					<!--TAB CONTENT-->
+					<article class="item">
+                        {day3event.map((item) => (
+                            <article>
+                                <h6 class="timestamp">{item.time}</h6>
+                                {item.event.map((event) => (
+                                    <article class="event">
+                                        <h5>{event.title}</h5>
+                                        <h6>{event.location}</h6>
+                                        <p>{event.description}</p>
+                                    </article>
+                                ))}
+                            </article>
+                        ))}
+					</article>
+					<!--/TAB CONTENT-->
+				</li>
+				<!--/TAB OPTION-->
+			</ul>
+			<!--/TAB-->
+			<!--<a href="#" class="button ruby">Download the complete schedule in PDF</a>-->
+		</section>
+	</div>
+	<!--/SCHEDULE-->

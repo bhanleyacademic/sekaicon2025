@@ -1,3 +1,41 @@
 ---
-$END$
+const sponsor = [{
+    id: 1,
+    img: 'images/sponsor-01.png',
+    alt: 'sponsor'
+}, {
+    id: 2,
+    img: 'images/sponsor-02.png',
+    alt: 'sponsor'
+}, {
+    id: 3,
+    img: 'images/sponsor-03.png',
+    alt: 'sponsor'
+}, {
+    id: 4,
+    img: 'images/sponsor-04.png',
+    alt: 'sponsor'
+}, {
+    id: 5,
+    img: 'images/sponsor-05.png',
+    alt: 'sponsor'
+}, {
+    id: 6,
+    img: 'images/sponsor-06.png',
+    alt: 'sponsor'
+}]
 ---
+<!--SPONSORS-->
+	<div id="sponsors-wrap">
+		<section id="sponsors">
+			<ul class="sponsors-items">
+                {sponsor.map((item) => (
+                    <li>
+                        <img src={item.img} alt={item.alt}>
+                    </li>
+                ))}
+			</ul>
+			<div class="cleaner"></div>
+		</section>
+	</div>
+	<!--/SPONSORS-->

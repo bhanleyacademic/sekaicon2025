@@ -1,3 +1,63 @@
 ---
-$END$
+const newsItem = [{
+        img: '/images/abstract-blurry-background-silhouettes-of-people-2024-10-18-07-26-34-utc.jpg',
+        icon: 'fa-solid fa-music',
+        title: 'K-Pop/J-Pop Dance Competition',
+        text: 'A high energy event where ambitious dancers compete for a chance to call themselves the best cover dancer of Sekaicon!',
+		buttons:[{
+			text: 'More Info',
+			link: '/kpop-jpop-dance-competition'
+		}]
+    },
+    {
+        img: '/images/group-of-young-happy-friends-visiting-paris-and-ei-2023-11-27-05-17-44-utc.jpg',
+        icon: 'fa-regular fa-file-lines',
+        title: 'Panelist Applications',
+        text: 'Do you have a talent or expertise that you\'d like to share with the Sekaicon community? We\'d love to hear it! Panelist applications for Sekaicon 2025 will be available very soon!',
+		buttons:[]
+    },
+    {
+        img: '/images/inuyasha-japanese-shonen-manga-kagura-disguise-2023-11-27-05-20-58-utc.jpg',
+        icon: 'fa-solid fa-user-group',
+        title: 'Special Guests & Featured Panelists',
+        text: 'Find out more about the special guests and featured panelists that will be attending Sekaicon 2025!',
+		buttons:[{
+			text: 'Special Guests',
+			link: '/guests'
+		},{
+			text: 'Featured Panelists',
+			link: '/panels'
+		}]
+	},
+];
 ---
+<!--NEWS-->
+	<div id="news-wrap">
+		<section id="news">
+			<p class="pre-title">What's New</p>
+			<h2>Sekai<span>con</span> <span>News</span></h2>
+			<hr>
+			<ul class="news-items">
+                {newsItem.map((item) => (
+                    <li>
+                        <figure class="imgLiquidFill">
+                            <img src={item.img} alt="news-img">
+                        </figure>
+                        <article>
+							<!--<img src={item.icon} alt="news-icon" />--> <i class={item.icon}></i>
+							<span class="icon-container"></span>
+                            <h6>{item.title}</h6>
+                            <p>{item.text}</p>
+							<span class="button-container">
+							{item.buttons.map((button) => (
+								<p class="button ruby"><a href={button.link}>{button.text}</a></p>
+							))}
+							</span>
+                        </article>
+                    </li>
+                ))}
+			</ul>
+			<div class="cleaner"></div>
+		</section>
+	</div>
+	<!--/NEWS-->

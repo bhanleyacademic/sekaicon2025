@@ -28,9 +28,10 @@ $('#countdown').xmcountdown({
 	height: 130,
 	fillWidth: 6,
 	gradient: true,
-	gradientColors: ['#f75e7e','#ec1a55'],
-	targetDate: new Date(2015, 3, 14)
+	gradientColors: ['#6aace2','#257bc1'],
+	targetDate: new Date(2025, 3, 11)
 });
+
 
 /*-----------------
 	TWEETS
